@@ -1,0 +1,25 @@
+<div>
+
+<h1 class="m-3"> Stupid Coach</h1>
+
+<div class="m-3 border-start border-4">
+<p class="m-3"> <%= @question %></p>
+<p class="m-3"> - You</p>
+</div>
+
+<div class="m-3 border-start border-4">
+<% if @question == 'I am going to work'%>
+<p class="m-3"> Great!</p>
+<p class="m-3"> - Coach </p>
+<% elsif @question.include?('?') %>
+<p class="m-3"> Silly question, get dressed and go to work!.</p>
+<p class="m-3"> - Coach </p>
+<% else %>
+<p class="m-3"> I don't care, get dressed and go to work! <p>
+<p class="m-3"> - Coach </p>
+<% end %>
+</div>
+
+<p class="m-3"> <%= link_to "Ask Another Question", ask_path %> </p>
+
+</div>
